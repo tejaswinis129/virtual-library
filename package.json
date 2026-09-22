@@ -1,12 +1,10 @@
 {
   "name": "virtual-library-app",
   "version": "1.0.0",
-  "description": "Full-stack Virtual Library connected to Google Books API and PostgreSQL",
+  "private": true,
   "scripts": {
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
-    "start": "node backend/src/index.js",
-    "dev": "node backend/src/index.js"
+    "build": "npm --prefix backend install && npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "node backend/src/index.js"
   },
   "keywords": [
     "virtual-library",
