@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "Full-stack Virtual Library connected to Google Books API and PostgreSQL",
   "scripts": {
-    "start:backend": "cd backend && npm run dev",
-    "start:frontend": "cd frontend && npm run dev",
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm run build"
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/src/index.js",
+    "dev": "node backend/src/index.js"
   },
-  "keywords": ["virtual-library", "google-books-api", "react", "express", "postgresql"],
+  "keywords": [
+    "virtual-library",
+    "google-books-api",
+    "react",
+    "express",
+    "postgresql"
+  ],
   "author": "",
   "license": "ISC"
 }
